@@ -1,8 +1,11 @@
 <!doctype html>
-<html>
+<html class="no-js" lang="">
     <head>
         <meta charset="utf-8">
-        <title>Mobile 100vh</title>
+        <title></title>
+        <meta name="description" content="">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="cleartype" content="on">
         <style>
@@ -16,6 +19,7 @@
             .image-container{
                 height: 100vh;
                 background: blue;
+                height: calc(var(--vh, 1vh) * 100);
             }
 
             .button-container{
@@ -41,4 +45,11 @@
             </div>
         </div>
     </body>
+
+    <script>
+        // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+        let vh = window.innerHeight * 0.01;
+        // Then we set the value in the --vh custom property to the root of the document
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    </script>
 </html>
