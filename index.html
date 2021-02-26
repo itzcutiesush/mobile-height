@@ -1,0 +1,44 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <title>Mobile 100vh</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="cleartype" content="on">
+        <style>
+            body, html{
+                margin: 0;
+            }
+            .image-container{
+                position: relative;
+                display: flex;
+            }
+            .image-container{
+                height: 100vh;
+                background: blue;
+            }
+
+            .button-container{
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+
+            .button-container .btn{
+                display: block;
+                margin: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="image-container">
+            <div class="button-container">
+                <button type="button" class="btn">Button 1</button>
+                <button type="button" class="btn">Button 2</button>
+                <button type="button" class="btn">Button 3</button>
+                <button type="button" class="btn">Button 4</button>
+            </div>
+        </div>
+    </body>
+</html>
